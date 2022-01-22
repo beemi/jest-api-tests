@@ -3,6 +3,7 @@ import type {Config} from '@jest/types';
 // Sync object
 const config: Config.InitialOptions = {
   verbose: true,
+  testTimeout: 20000
 };
 export default config;
 
@@ -10,5 +11,6 @@ export default config;
 export async function getConfig(): Promise<Config.InitialOptions> {
   return {
     verbose: true,
+    testTimeout: 20000
   };
 }
