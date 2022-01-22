@@ -1,0 +1,34 @@
+{
+  "name": "jest-api-tests",
+  "version": "1.0.0",
+  "description": "API testing with JEST framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beemi/jest-api-tests.git"
+  },
+  "keywords": [
+    "jest",
+    "testing",
+    "apitests",
+    "automation"
+  ],
+  "author": "RajBeemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beemi/jest-api-tests/issues"
+  },
+  "homepage": "https://github.com/beemi/jest-api-tests#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "ts-node": "^10.4.0"
+  }
+}
