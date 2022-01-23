@@ -1,7 +1,12 @@
 const axios = require('axios');
 
+
 beforeEach(() => {
     axios.defaults.baseURL = 'http://api.postcodes.io';
+});
+
+afterEach(() => {
+    axios.defaults.baseURL = '';
 });
 
 test('test lat long', async () => {
@@ -44,4 +49,3 @@ test('test bulk reverse Geocoding', async () => {
     console.log(JSON.stringify(response.data));
     expect(response.status).toBe(200);
 });
-
