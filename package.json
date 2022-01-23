@@ -4,7 +4,7 @@
   "description": "API testing with JEST framework",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --colors"
   },
   "repository": {
     "type": "git",
