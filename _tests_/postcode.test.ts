@@ -24,6 +24,16 @@ test('test lat long with postcode lowercase', async () => {
     expect(response.status).toBe(200);
 });
 
+test.each([
+    {postcode: 'SW1A 1AA', expected: 'SW1A 1AA'},
+    {postcode: 'RM176EY', expected: 'RM17 6EY'}
+])('test lat long with table data', async ({postcode, expected}) => {
+    const response = await axios.get('/postcodes/' + postcode);
+    console.log(JSON.stringify(response.data));
+    expect(response.status).toBe(200);
+    expect(response.data.result.postcode).toBe(expected);
+});
+
 test('test bulk lat long validations', async () => {
     const response = await axios.post('/postcodes/', {
         "postcodes": ["OX49 5NU", "M32 0JG", "NE30 1DP"]
